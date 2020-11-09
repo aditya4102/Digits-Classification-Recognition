@@ -10,7 +10,7 @@ from keras.layers import Dense
 from keras.optimizers import Adam
 from keras.layers import Dropout, Flatten
 from keras.layers.convolutional import Conv2D, MaxPooling2D
-import pickle
+
 
 ################ PARAMETERS ########################
 path = 'myData'
@@ -164,6 +164,4 @@ print('Test Score = ', score[0])
 print('Test Accuracy =', score[1])
 
 #### SAVE THE TRAINED MODEL
-pickle_out = open("model_trained.p", "wb")
-pickle.dump(model, pickle_out)
-pickle_out.close()
+model.save('model_name.h5')
