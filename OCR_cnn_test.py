@@ -11,7 +11,7 @@ cap = cv2.VideoCapture(1)
 cap.set(3,width)
 cap.set(4,height)
 
-new_model = load_model('name of your trained model')
+new_model = load_model('name of trained model')
 
 def preProcessing(img):
     img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
